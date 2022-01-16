@@ -1,8 +1,6 @@
 from pygame import image, font, transform, mask
 import os
 
-FONT = font.Font(os.path.join('Assets', 'Font.ttf'), 32)
-
 GUNS = [{"Name":"MPX", "Cal":"9x19", "Damage":30, "Sound":None, "RPM":850, "Mag":30},
 {"Name":"P90", "Cal":"5.7x28", "Damage":26, "Sound":None, "RPM":900, "Mag":50},
 {"Name":"MP7", "Cal":"4.6x30", "Damage":31, "Sound":None, "RPM":950, "Mag":30},
@@ -30,9 +28,13 @@ CHEST = [image.load(os.path.join('Assets', 'ChestClosed.png')).convert_alpha(),
 image.load(os.path.join('Assets', 'ChestOpen.png')).convert_alpha()]
 
 ICON = transform.rotate(image.load(os.path.join('Assets', 'PlayerIcon.png')).convert_alpha(), 0)
-BACKGROUND = image.load(os.path.join('Assets', 'Background.png')).convert()
+
 PMASK = mask.from_surface(ICON)
 
 MAPS = [[0, 0],[1, 0],[1, 1],[0, 1],[-1, 1],[-1, 0],[-1, -1],[0, -1],[1, -1]]
 ROOMS3 = [5, 1, 7, 3]
 ROOMS4 = [1, 5, 3, 7]
+
+BACKGROUND = image.load(os.path.join('Assets', 'Background.png')).convert()
+
+FONT = font.Font(os.path.join('Assets', 'Font.ttf'), 32)
