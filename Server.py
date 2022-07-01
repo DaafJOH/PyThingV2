@@ -15,10 +15,8 @@ s.listen()
 
 def client(conn, null):
     while True:
-        try:
-            data = pickle.loads(conn.recv(2048))
-        except EOFError:
-            break
+        try: data = pickle.loads(conn.recv(2048))
+        except EOFError: break
         else:
             if data == SERVER.DISCONNECT: break
             elif data == SERVER.PING: conn.send(pickle.dumps("Pong"))

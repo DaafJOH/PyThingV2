@@ -37,4 +37,4 @@ ROOMS4 = [1, 5, 3, 7]
 
 BACKGROUND = image.load(os.path.join('Assets', 'Background.png')).convert()
 
-FONT = font.Font(os.path.join('Assets', 'Font.ttf'), 32)
+def GetFont(size): return font.Font(os.path.join('Assets', 'Font.ttf'), size)
